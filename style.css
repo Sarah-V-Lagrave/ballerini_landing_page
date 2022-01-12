@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@keyframes unblur {
+  from {
+    filter: blur(20px);
+  }
+  to {
+    filter: none;
+  }
+}
+
+body {
+  background: url(./hogwarts.jpg) no-repeat ;
+  background-size: cover;
+  animation: unblur 1s ease;
+}
+
+.broomsContainer {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120vh;
+  position: fixed;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.broomsContainer > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.broomsContainer > div svg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -20%;
+}
+
+.broomsContainer > div svg:nth-child(1) {
+  left: -25%;
+}
+.broomsContainer > div svg:nth-child(2) {
+  left: -50%;
+}
+.broomsContainer > div svg:nth-child(3) {
+  left: -75%;
+}
+
+body> div {
+  min-height: 100vh;
+  font-size: 100%;
+  background: rgba(47,35,21, .7);
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.cabecalho-imagem {
+  height: 72px;
+}
+
+.cabecalho-menu {
+  position: relative;
+  display: flex;
+  gap: 32px;
+}
+
+.cabecalho-menu input,.cabecalho-menu label {
+  display: none;
+}
+
+.cabecalho-menu label {
+  position: relative;
+  height: 30px;
+  width: 40px;
+}
+
+.cabecalho-menu label .hamburger {
+  background-color: #ffffff;
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  transition: all .5s;
+  transform: rotate(0deg) translateY(0);
+}
+
+.cabecalho-menu label .hamburger-top {
+  top: 0;
+
+}
+.cabecalho-menu label .hamburger-mid {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cabecalho-menu label .hamburger-bot {
+  bottom: 0;
+}
+
+.cabecalho-menu input:checked ~ label .hamburger-top {
+  transform-origin: right;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.cabecalho-menu input:checked ~ label .hamburger-mid {
+  transform: scaleX(0);
+}
+
+.cabecalho-menu input:checked ~ label .hamburger-bot {
+  transform-origin: right;
+  transform: rotate(45deg);
+}
+
+
+@media screen and (max-width: 768px){
+  .cabecalho-menu label {
+    display: initial;
+    z-index: 2;
+  }
+  .cabecalho-menu input:checked ~ ul {
+    right: 0px;
+  }
+  .cabecalho-menu ul {
+    right: -300px;
+    padding: 72px 0;
+    top: 0;
+    position: fixed;
+    flex-direction: column;
+    background-color: #ffe774;
+    width: 300px;
+    height: 500px;
+    z-index: 1;
+    transition: right .5s;
+    
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .cabecalho-menu ul a {
+    text-align: center;
+    color:rgba(0, 0, 0, 0.8);
+  }
+}
+@media screen and (max-width: 425px){
+  .cabecalho-menu ul {
+    width: 100vw;
+    height: 100vh;
+    right: -100vw;
+  }
+  
+}
+
+.cabecalho-menu ul {
+  display: flex;
+  gap: 32px;
+}
+
+.cabecalho-menu-item {
+  font-family: 'Sarala', sans-serif;
+  color: #FFF2E7;
+  font-weight: 400;
+  font-size: 18px
+}
+
+.conteudo {
+  margin-bottom: 48px;
+  border-top: 0.4px solid #FFF2E7;
+  flex: 1;
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  gap: 32px;
+}
+
+.conteudo-principal-escrito-titulo {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 64px;
+  color: #FFF2E7;
+}
+
+.conteudo-principal-escrito-subtitulo {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ECD6C4;
+}
+
+.conteudo-principal-escrito-botao {
+  background-color: #ECD6C4;
+  width: 180px;
+  height: 60px;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2F2325;
+}
+
+.conteudo-principal-escrito-botao:hover {
+  background-color: rgba(236, 214, 196, 0.53);
+}
+
+.conteudo-principal-imagem {
+  max-height: 320px;
+}
+
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@keyframes floating {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  15% {
+    top: -5px;
+    transform: rotate(1deg);
+    left: 2px;
+  }
+  30% {
+    transform: rotate(2deg);
+  }
+  37% {
+    left: 10px;
+    top: -10px;
+    transform: rotate(3deg);
+  }
+  45% {
+    transform: rotate(1deg);
+  }
+  55% {
+    left: 15px;
+    transform: rotate(-5deg);
+    top: -15px;
+  }
+  65% {
+    left: 0px;
+    transform: rotate(-2deg);
+    top: -20px;
+
+  }
+  80% {
+    left: -20px;
+    top: -10px;
+    transform: rotate(-3deg);
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+.conteudo-secundario-titulo {
+  position: relative;
+  transform-origin: center;
+  animation: floating 3s linear infinite ;
+  border-top: 0.4px solid #FFF2E7;
+  padding-top: 48px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffe774;
+  margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+  position: relative;
+  margin: 0 30px;
+  animation: floating 5s 3s linear infinite ;
+  font-family: 'Sarala', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px){
+  .conteudo-secundario-paragrafo {
+    text-align: center;
+  }
+  
+}
+
+.rodape {
+    padding: 32px;
+    border-top: 0.4px solid #FFF2E7;
+}
+
+.rodape-imagem {
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}

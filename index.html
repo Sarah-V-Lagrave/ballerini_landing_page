@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Badger Bot | Bot de moderação</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+</head>
+
+<body>
+  <div>
+    <header class="cabecalho">
+      <a href="https://discord.gg/wagxzStdcR" target="_blank">
+        <img class="cabecalho-imagem" src="hufflepuff.png" alt="Logo da comunidade Ballerini">
+      </a>
+      <nav class="cabecalho-menu">
+        <input type="checkbox" id="menu-button">
+        <label class="menu-hamburger-button" for="menu-button">
+          <div class="hamburger hamburger-top"></div>
+          <div class="hamburger hamburger-mid"></div>
+          <div class="hamburger hamburger-bot"></div>
+        </label>
+        <ul>
+          <a class="cabecalho-menu-item" target="_blank" href="https://discord.gg/wagxzStdcR">Comunidade Ballerini</a>
+          <a class="cabecalho-menu-item" target="_blank" href="https://www.youtube.com/watch?v=llF6vD-RljE">Tutorial</a>
+          <a class="cabecalho-menu-item" target="_blank" href="https://github.com/rafaballerini/DiscordBot">Open
+            Source</a>
+        </ul>
+      </nav>
+    </header>
+    <div class="broomsContainer">
+      <div>
+        <svg class="svg2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000"
+          style="enable-background:new 0 0 267.997 267.997;" xml:space="preserve">
+          <g>
+            <path style="fill:#ffffff;"
+              d="M 180.598 7.481 C 167.23 53.71 156.384 100.56 142.628 146.675 C 143.743 151.748 143.736 154.225 141.8 159.002 C 143.608 168.991 146.175 173.834 139.825 184.431 C 139.882 184.746 139.864 185.01 139.849 185.273 C 142.036 187.287 140.163 192.769 138.917 194.884 C 145.621 220.633 140.183 243.795 123.819 264.365 C 122.62 265.298 121.014 267.217 119.437 267.502 C 118.675 265.817 121.132 262.833 120.767 260.815 C 119.367 262.437 113.642 269.659 110.738 267.645 C 111.558 265.348 113.625 260.936 113.179 258.476 C 110.677 262.642 108.997 264.508 104.089 264.745 C 103.553 261.782 105.667 258.339 105.611 255.158 C 103.35 257.781 102.472 260.48 101.654 263.884 C 97.018 263.811 99.338 252.516 99.5 250.533 C 97.595 251.53 95.406 257.786 94.584 260.085 C 94.332 260.13 94.081 260.176 93.752 260.17 C 91.305 253.841 91.78 247.113 92.215 240.521 C 90.93 242.056 89.645 243.591 88.646 245.27 C 88.32 245.264 87.93 245.269 87.53 245.211 L 87.53 245.211 C 87.33 243.034 87.33 243.034 87.395 240.872 C 90.458 218.429 93.856 194.457 109.574 176.687 C 111.639 173.709 113.418 171.304 116.199 169.042 C 118.474 162.899 122.541 156.953 127.646 152.774 C 130.821 150.897 130.821 150.897 131.664 150.158 C 151.719 106.072 156.357 50.662 170.379 3.926 C 171.773 1.916 174.566 0.434 176.961 0 C 180.436 1.193 180.795 4.255 180.598 7.481 Z">
+              <animateMotion dur="6s" repeatCount="indefinite">
+                <mpath xlink:href="#path1" />
+              </animateMotion>
+            </path>
+          </g>
+          <path id="path1" fill="none" d="M 0,2000 C 100 2000, 1800 100, 1800 -200" />
+        </svg>
+        <svg class="svg2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000"
+          style="enable-background:new 0 0 267.997 267.997;" xml:space="preserve">
+          <g>
+            <path style="fill:#ffffff;"
+              d="M 180.598 7.481 C 167.23 53.71 156.384 100.56 142.628 146.675 C 143.743 151.748 143.736 154.225 141.8 159.002 C 143.608 168.991 146.175 173.834 139.825 184.431 C 139.882 184.746 139.864 185.01 139.849 185.273 C 142.036 187.287 140.163 192.769 138.917 194.884 C 145.621 220.633 140.183 243.795 123.819 264.365 C 122.62 265.298 121.014 267.217 119.437 267.502 C 118.675 265.817 121.132 262.833 120.767 260.815 C 119.367 262.437 113.642 269.659 110.738 267.645 C 111.558 265.348 113.625 260.936 113.179 258.476 C 110.677 262.642 108.997 264.508 104.089 264.745 C 103.553 261.782 105.667 258.339 105.611 255.158 C 103.35 257.781 102.472 260.48 101.654 263.884 C 97.018 263.811 99.338 252.516 99.5 250.533 C 97.595 251.53 95.406 257.786 94.584 260.085 C 94.332 260.13 94.081 260.176 93.752 260.17 C 91.305 253.841 91.78 247.113 92.215 240.521 C 90.93 242.056 89.645 243.591 88.646 245.27 C 88.32 245.264 87.93 245.269 87.53 245.211 L 87.53 245.211 C 87.33 243.034 87.33 243.034 87.395 240.872 C 90.458 218.429 93.856 194.457 109.574 176.687 C 111.639 173.709 113.418 171.304 116.199 169.042 C 118.474 162.899 122.541 156.953 127.646 152.774 C 130.821 150.897 130.821 150.897 131.664 150.158 C 151.719 106.072 156.357 50.662 170.379 3.926 C 171.773 1.916 174.566 0.434 176.961 0 C 180.436 1.193 180.795 4.255 180.598 7.481 Z">
+              <animateMotion dur="6s" repeatCount="indefinite" begin="2s">
+                <mpath xlink:href="#path1" />
+              </animateMotion>
+            </path>
+          </g>
+          <path id="path1" fill="none" d="M 0,2000 C 100 2000, 1800 100, 1800 -200" />
+        </svg>
+        <svg class="svg2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000"
+          style="enable-background:new 0 0 267.997 267.997;" xml:space="preserve">
+          <g>
+            <path style="fill:#ffffff;"
+              d="M 180.598 7.481 C 167.23 53.71 156.384 100.56 142.628 146.675 C 143.743 151.748 143.736 154.225 141.8 159.002 C 143.608 168.991 146.175 173.834 139.825 184.431 C 139.882 184.746 139.864 185.01 139.849 185.273 C 142.036 187.287 140.163 192.769 138.917 194.884 C 145.621 220.633 140.183 243.795 123.819 264.365 C 122.62 265.298 121.014 267.217 119.437 267.502 C 118.675 265.817 121.132 262.833 120.767 260.815 C 119.367 262.437 113.642 269.659 110.738 267.645 C 111.558 265.348 113.625 260.936 113.179 258.476 C 110.677 262.642 108.997 264.508 104.089 264.745 C 103.553 261.782 105.667 258.339 105.611 255.158 C 103.35 257.781 102.472 260.48 101.654 263.884 C 97.018 263.811 99.338 252.516 99.5 250.533 C 97.595 251.53 95.406 257.786 94.584 260.085 C 94.332 260.13 94.081 260.176 93.752 260.17 C 91.305 253.841 91.78 247.113 92.215 240.521 C 90.93 242.056 89.645 243.591 88.646 245.27 C 88.32 245.264 87.93 245.269 87.53 245.211 L 87.53 245.211 C 87.33 243.034 87.33 243.034 87.395 240.872 C 90.458 218.429 93.856 194.457 109.574 176.687 C 111.639 173.709 113.418 171.304 116.199 169.042 C 118.474 162.899 122.541 156.953 127.646 152.774 C 130.821 150.897 130.821 150.897 131.664 150.158 C 151.719 106.072 156.357 50.662 170.379 3.926 C 171.773 1.916 174.566 0.434 176.961 0 C 180.436 1.193 180.795 4.255 180.598 7.481 Z">
+              <animateMotion dur="6s" repeatCount="indefinite" begin="3s">
+                <mpath xlink:href="#path1" />
+              </animateMotion>
+            </path>
+          </g>
+          <path id="path1" fill="none" d="M 0,2000 C 100 2000, 1800 100, 1800 -200" />
+        </svg>
+        <svg class="svg2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000"
+          style="enable-background:new 0 0 267.997 267.997;" xml:space="preserve">
+          <g>
+            <path style="fill:#ffffff;"
+              d="M 180.598 7.481 C 167.23 53.71 156.384 100.56 142.628 146.675 C 143.743 151.748 143.736 154.225 141.8 159.002 C 143.608 168.991 146.175 173.834 139.825 184.431 C 139.882 184.746 139.864 185.01 139.849 185.273 C 142.036 187.287 140.163 192.769 138.917 194.884 C 145.621 220.633 140.183 243.795 123.819 264.365 C 122.62 265.298 121.014 267.217 119.437 267.502 C 118.675 265.817 121.132 262.833 120.767 260.815 C 119.367 262.437 113.642 269.659 110.738 267.645 C 111.558 265.348 113.625 260.936 113.179 258.476 C 110.677 262.642 108.997 264.508 104.089 264.745 C 103.553 261.782 105.667 258.339 105.611 255.158 C 103.35 257.781 102.472 260.48 101.654 263.884 C 97.018 263.811 99.338 252.516 99.5 250.533 C 97.595 251.53 95.406 257.786 94.584 260.085 C 94.332 260.13 94.081 260.176 93.752 260.17 C 91.305 253.841 91.78 247.113 92.215 240.521 C 90.93 242.056 89.645 243.591 88.646 245.27 C 88.32 245.264 87.93 245.269 87.53 245.211 L 87.53 245.211 C 87.33 243.034 87.33 243.034 87.395 240.872 C 90.458 218.429 93.856 194.457 109.574 176.687 C 111.639 173.709 113.418 171.304 116.199 169.042 C 118.474 162.899 122.541 156.953 127.646 152.774 C 130.821 150.897 130.821 150.897 131.664 150.158 C 151.719 106.072 156.357 50.662 170.379 3.926 C 171.773 1.916 174.566 0.434 176.961 0 C 180.436 1.193 180.795 4.255 180.598 7.481 Z">
+              <animateMotion dur="6s" repeatCount="indefinite" begin="4s">
+                <mpath xlink:href="#path1" />
+              </animateMotion>
+            </path>
+          </g>
+          <path id="path1" fill="none" d="M 0,2000 C 100 2000, 1800 100, 1800 -200" />
+        </svg>
+      </div>
+    </div>
+    <main class="conteudo">
+      <section class="conteudo-principal">
+        <div class="conteudo-principal-escrito">
+          <h1 class="conteudo-principal-escrito-titulo">Badger Bot</h1>
+          <h2 class="conteudo-principal-escrito-subtitulo">Deixe a sua comunidade segura de um jeito mágico</h2>
+          <a class="conteudo-principal-escrito-botao"
+            href="https://discord.com/api/oauth2/authorize?client_id=877581958190886982&permissions=8&scope=bot">Me
+            adicione!</a>
+        </div>
+        <img class="conteudo-principal-imagem" src="hufflepufflogo.png" alt="Imagem da Badger Bot">
+      </section>
+
+      <section class="conteudo-secundario">
+        <h3 class="conteudo-secundario-titulo">O que ele faz por você?</h3>
+        <p class="conteudo-secundario-paragrafo">1. Cria um <strong>sistema de verificação capcha</strong> para novos
+          membros garantirem que não são robôs</p>
+        <p class="conteudo-secundario-paragrafo">2. Possui um <strong>sistema de banimento automático</strong> para
+          links
+          suspeitos que forem enviados na comunidade</p>
+        <p class="conteudo-secundario-paragrafo">3. <strong>Sistema de avisos e banimento manual</strong>, para pessoas
+          administradoras utilizarem</p>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <a href="https://discord.gg/wagxzStdcR" target="_blank">
+        <img class="rodape-imagem" src="ballerini.svg">
+      </a>
+    </footer>
+  </div>
+</body>
+
+</html>
